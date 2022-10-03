@@ -382,6 +382,7 @@
 "Assets/Scripts/movement.cs"
 "Assets/Scripts/navEnemy.cs"
 "Assets/Scripts/Player_Health.cs"
+"Assets/Scripts/Ranged_Attack.cs"
 "Assets/Scripts/Shadow.cs"
 -langversion:9.0
 
