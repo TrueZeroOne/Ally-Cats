@@ -40,6 +40,14 @@ public class movement : MonoBehaviour
         {
             TakeDamage(20);
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            GiveHealth(20);
+        }
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -54,6 +62,12 @@ public class movement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
+    public void GiveHealth(int health)
+    {
+        currentHealth += health;
 
         healthBar.SetHealth(currentHealth);
     }
