@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 394469575}
   - component: {fileID: 394469574}
   - component: {fileID: 394469573}
+  - component: {fileID: 394469578}
   - component: {fileID: 394469576}
   - component: {fileID: 394469577}
   m_Layer: 0
@@ -435,6 +436,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &394469578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394469572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818e74d37f4ea0846a880cbc37f70a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 937380064}
+  bulletPrefab: {fileID: 3672429530118748482, guid: 39d2e9c1b3841ea49b6f4e60c1720f58, type: 3}
+  fireRate: 1
 --- !u!1 &656046489
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +755,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937380063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 0, z: 0}
+  m_LocalPosition: {x: 1.114, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-3.0645182132720949,"y":0.3891589641571045,"z":0.3685263991355896},"rotation":{"x":0.1699633151292801,"y":0.5748339891433716,"z":-0.11547902971506119,"w":0.7920645475387573},"size":0.7810249328613281,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":2.909593105316162,"y":-5.417690753936768,"z":8.172588348388672},"rotation":{"x":0.21521811187267304,"y":-0.0678495541214943,"z":0.02138006128370762,"w":0.9739693403244019},"size":6.813374996185303,"orthographic":false}
+>>>>>>> Stashed changes
