@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class navEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject playerObj;
-    [SerializeField] private NavMeshAgent Agent;
+    [SerializeField] public NavMeshAgent Agent;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,5 @@ public class navEnemy : MonoBehaviour
     void Update()
     {
         Agent.destination = playerObj.transform.position;
-        
     }
 }
