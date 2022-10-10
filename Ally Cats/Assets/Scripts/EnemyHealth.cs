@@ -11,4 +11,11 @@ public class EnemyHealth : MonoBehaviour
         enemyHealth -= damage;
         Debug.Log("Damage Taken!!");
     }
+    void Update()
+    {
+        if (enemyHealth == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
