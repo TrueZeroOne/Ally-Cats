@@ -7,6 +7,7 @@ public class enemyAttack : MonoBehaviour
     private float attackTime;
     [SerializeField] private GameObject player;
     [SerializeField] private int attRange;
+    [SerializeField] private int attackspeed;
     private bool canAttack = true;
     // Start is called before the first frame update
     void Start()
