@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int enemyHealth;
-
+    
     public void TakeDamage(int damage)
     {
         enemyHealth -= damage;
@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     }
     void Update()
     {
-        if (enemyHealth == 0)
+        if (enemyHealth <= 0)
         {
             Destroy(gameObject);
         }

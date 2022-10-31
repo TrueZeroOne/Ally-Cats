@@ -30,11 +30,9 @@ public class Melee_Attack : MonoBehaviour
                 timeBtwAttack = startTimeBtwAttack;
 
            
-             }else{
-            
-                timeBtwAttack -= Time.deltaTime;
              }
-        } 
-       
+        }
+        timeBtwAttack -= Time.deltaTime;
     }
+    
 }
