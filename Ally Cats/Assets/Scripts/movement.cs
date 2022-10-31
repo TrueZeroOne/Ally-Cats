@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
+    [SerializeField] Animator anim;
     [SerializeField] private Rigidbody rb;
     private float horizontalInput;
     private float verticalInput;
@@ -50,6 +51,8 @@ public class movement : MonoBehaviour
             currentHealth = maxHealth;
             // Destroy(gameObject);
         }
+
+        anim.SetFloat("speed",rb.velocity.magnitude);
     }
 
     private void FixedUpdate()
