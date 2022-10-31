@@ -16,15 +16,12 @@ public class movement : MonoBehaviour
     [SerializeField] private float jumpForce;
 
     [Header("Health")]
-    public int maxHealth = 100;
-    public int currentHealth;
     public Player_Health healthBar;
 
 
     private void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        
     }
 
 
@@ -45,14 +42,7 @@ public class movement : MonoBehaviour
         {
             GiveHealth(20);
         }
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Dead");
-            currentHealth = maxHealth;
-            // Destroy(gameObject);
-        }
-
-        anim.SetFloat("speed",rb.velocity.magnitude);
+        
     }
 
     private void FixedUpdate()
@@ -66,14 +56,14 @@ public class movement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        
 
-        healthBar.SetHealth(currentHealth);
+        healthBar.TakeDamage(20);
     }
     public void GiveHealth(int health)
     {
-        currentHealth += health;
+        
 
-        healthBar.SetHealth(currentHealth);
+        healthBar.TakeDamage(-20);
     }
 }
