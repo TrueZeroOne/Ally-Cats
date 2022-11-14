@@ -42,13 +42,6 @@ public class movement : MonoBehaviour
         {
             GiveHealth(20);
         }
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Dead");
-            currentHealth = maxHealth;
-            // Destroy(gameObject);
-        }
-
         anim.SetFloat("speed",rb.velocity.x);
         anim.SetFloat("vert speed",rb.velocity.y);
     }
