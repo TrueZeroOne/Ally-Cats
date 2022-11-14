@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class movement : MonoBehaviour
 {
@@ -14,19 +15,30 @@ public class movement : MonoBehaviour
     [SerializeField] private float verSpeed;
     [SerializeField] private bool jumpCheck = true;
     [SerializeField] private float jumpForce;
-
+     CinemachineTrackedDolly trackdolly;
+    public CinemachineVirtualCamera camma;
+    [SerializeField] public float maxpos;
     [Header("Health")]
     public Player_Health healthBar;
 
 
     private void Start()
     {
-        
+        trackdolly = camma.GetCinemachineComponent<CinemachineTrackedDolly>();
     }
 
-
-    void Update()
+   
+    private void Update()
     {
+        if (trackdolly.m_PathPosition > maxpos)
+        {
+            maxpos = trackdolly.m_PathPosition;
+        }
+        if (trackdolly.m_PathPosition < maxpos)
+        {
+            trackdolly.m_PathPosition = maxpos;
+        }
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.Space) && jumpCheck)
@@ -42,6 +54,9 @@ public class movement : MonoBehaviour
         {
             GiveHealth(20);
         }
+
+        
+
         anim.SetFloat("speed",rb.velocity.x);
         anim.SetFloat("vert speed",rb.velocity.y);
     }
