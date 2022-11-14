@@ -1,44 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class enemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabEnemies;
     [SerializeField] private int[] enemiesToSpawn;
+    [SerializeField] private int[] enemies;
     [SerializeField] private int spawnTime;
-    private System.DateTime startTime;
-    private bool canSpawn = true;
+    [SerializeField] private GameObject enemyhandeler;
     // Start is called before the first frame update
     void Start()
     {
-        startTime = DateTime.Now;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        TimeSpan ts = DateTime.Now-startTime;
-        if (ts.Seconds > spawnTime)
+        for (int i = 0; i < enemiesToSpawn.Length; i++)
         {
-            startTime = DateTime.Now;
-            int allEmpty = 0;
-            int spawnEnemy = UnityEngine.Random.Range(0, enemiesToSpawn.Length);
-            if (enemiesToSpawn[spawnEnemy] > 0 && canSpawn)
+            while(enemiesToSpawn[i] > 0)
             {
-                enemiesToSpawn[spawnEnemy]--;
-                Instantiate(prefabEnemies[spawnEnemy], transform.position, transform.rotation);
+                Instantiate(prefabEnemies[i], new Vector3(Random.Range(-10,10),transform.position.y,Random.Range(-10,10)), transform.rotation,enemyhandeler.transform);
+                enemiesToSpawn[i]--;
             }
+        }
+        if (enemyhandeler.transform.childCount <= 0)
+        {
             for (int i = 0; i < enemiesToSpawn.Length; i++)
             {
-                if (enemiesToSpawn[i] < 1)
-                {
-                    allEmpty++;
-                }
-
-                if (allEmpty == enemiesToSpawn.Length) { canSpawn = false; } else { allEmpty = 0; }
+                enemiesToSpawn[i] = 2;
             }
         }
     }
