@@ -408,6 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91bba78fa3c6cf745b2850cdcc0b1a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   rb: {fileID: 394469576}
   horSpeed: 8
   verSpeed: 8
@@ -1562,7 +1563,7 @@ GameObject:
   - component: {fileID: 1415906534}
   - component: {fileID: 1415906533}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Take Damage Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1635,7 +1636,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 394469580}
         m_TargetAssemblyTypeName: PlayerLivesCounter, Assembly-CSharp
-        m_MethodName: TakeDamage
+        m_MethodName: LoseLives
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

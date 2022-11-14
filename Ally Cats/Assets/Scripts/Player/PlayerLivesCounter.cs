@@ -10,49 +10,51 @@ public class PlayerLivesCounter : MonoBehaviour
     public int life;
 
 
-    void Update()
+    public void Update()
     {
         if (life < 1)
         {
-            Destroy(Lives[0].gameObject);
+            Lives[0].gameObject.SetActive(false);
         }
         else if (life < 2)
         {
-            Destroy(Lives[1].gameObject);
+            Lives[1].gameObject.SetActive(false);
         }
         else if (life < 3)
         {
-            Destroy(Lives[2].gameObject);
+            Lives[2].gameObject.SetActive(false);
         }
         else if (life < 4)
         {
-            Destroy(Lives[3].gameObject);
+            Lives[3].gameObject.SetActive(false);
         }
         else if (life < 5)
         {
-            Destroy(Lives[4].gameObject);
+            Lives[4].gameObject.SetActive(false);
         }
         else if (life < 6)
         {
-            Destroy(Lives[5].gameObject);
+            Lives[5].gameObject.SetActive(false);
         }
         else if (life < 7)
         {
-            Destroy(Lives[6].gameObject);
+            Lives[6].gameObject.SetActive(false);
         }
         else if (life < 8)
         {
-            Destroy(Lives[7].gameObject);
+            Lives[7].gameObject.SetActive(false);
         }
         else if (life < 9)
         {
-            Destroy(Lives[8].gameObject);
+            Lives[8].gameObject.SetActive(false);
         }
         if(life < 0)
         {
-            Destroy(gameObject);
+           gameObject.SetActive(false);
 
         }
+
+       
         
     }
 
@@ -60,6 +62,8 @@ public class PlayerLivesCounter : MonoBehaviour
     {
         life -= d;
          
-        
+         
     }
+
+    
 }
