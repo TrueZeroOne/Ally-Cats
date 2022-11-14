@@ -33,7 +33,7 @@ public class movement : MonoBehaviour
         {
             Jump();
         }
-
+        
         if (Input.GetKeyDown(KeyCode.L))
         {
             TakeDamage(20);
@@ -54,7 +54,7 @@ public class movement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
     }
-
+    
     public void TakeDamage(int damage)
     {
         
@@ -67,4 +67,5 @@ public class movement : MonoBehaviour
 
         healthBar.TakeDamage(-20);
     }
+    
 }
