@@ -29,7 +29,7 @@ public class enemySpawner : MonoBehaviour
             if (enemiesToSpawn[spawnEnemy] > 0 && canSpawn)
             {
                 enemiesToSpawn[spawnEnemy]--;
-                Instantiate(prefabEnemies[spawnEnemy]);
+                Instantiate(prefabEnemies[spawnEnemy], transform.position, transform.rotation);
             }
             for (int i = 0; i < enemiesToSpawn.Length; i++)
             {

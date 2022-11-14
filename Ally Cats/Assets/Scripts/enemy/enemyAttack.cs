@@ -12,6 +12,7 @@ public class enemyAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class enemyAttack : MonoBehaviour
     }
     public IEnumerator Attack()
     {
-        var nav = FindObjectOfType(typeof(navEnemy)) as navEnemy;
+        var nav = this.gameObject.GetComponent<navEnemy>();
         nav.Agent.isStopped = true;
         yield return new WaitForSeconds(2f);
         if (Vector3.Distance(player.transform.position, transform.position) <= attRange && player.transform.position.y < 0)

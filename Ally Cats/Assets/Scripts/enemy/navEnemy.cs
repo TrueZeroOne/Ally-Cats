@@ -11,6 +11,7 @@ public class navEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerObj = GameObject.FindGameObjectWithTag("Player");
         Agent.destination = playerObj.transform.position;
     }
 
