@@ -455,6 +455,7 @@ MonoBehaviour:
   firePoint: {fileID: 937380064}
   bulletPrefab: {fileID: 3672429530118748482, guid: 39d2e9c1b3841ea49b6f4e60c1720f58, type: 3}
   fireRate: 1
+  anim: {fileID: 1856921290}
 --- !u!114 &394469579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,12 +469,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 0.3
+  anim: {fileID: 1856921290}
+  attackAnim:
+  - attack
+  - attack 2
+  - attack 3
   attackPos: {fileID: 1325241483}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
   attackRange: 3
   damage: 20
+  timer: 0.5
 --- !u!1 &656046489
 GameObject:
   m_ObjectHideFlags: 0

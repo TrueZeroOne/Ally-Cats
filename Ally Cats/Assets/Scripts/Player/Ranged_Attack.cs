@@ -7,6 +7,7 @@ public class Ranged_Attack : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float fireRate = 1f;
+    public Animator anim;
 
     private float nextTimeToFire = 0f;
 
@@ -15,8 +16,10 @@ public class Ranged_Attack : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F) && Time.time >= nextTimeToFire)
         {
+            anim.SetTrigger("shoot");
             nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            
+          
         }
     }
 
