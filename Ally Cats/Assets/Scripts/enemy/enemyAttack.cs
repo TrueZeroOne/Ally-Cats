@@ -33,7 +33,7 @@ public class enemyAttack : MonoBehaviour
         {
             Debug.Log("DAMAGE");
             var health = FindObjectOfType(typeof(movement)) as movement;
-            health.TakeDamage(10);    
+            health.TakeDamage(10);   
         }
         nav.Agent.isStopped = false;
         canAttack = true;

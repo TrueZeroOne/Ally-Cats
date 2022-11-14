@@ -33,7 +33,7 @@ public class movement : MonoBehaviour
         {
             Jump();
         }
-
+        
         if (Input.GetKeyDown(KeyCode.L))
         {
             TakeDamage(20);
@@ -42,12 +42,7 @@ public class movement : MonoBehaviour
         {
             GiveHealth(20);
         }
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Dead");
-            currentHealth = maxHealth;
-            // Destroy(gameObject);
-        }
+        
 
         anim.SetFloat("speed",rb.velocity.x);
         anim.SetFloat("vert speed",rb.velocity.y);
@@ -61,7 +56,7 @@ public class movement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
     }
-
+    
     public void TakeDamage(int damage)
     {
         
@@ -74,4 +69,5 @@ public class movement : MonoBehaviour
 
         healthBar.TakeDamage(-20);
     }
+    
 }

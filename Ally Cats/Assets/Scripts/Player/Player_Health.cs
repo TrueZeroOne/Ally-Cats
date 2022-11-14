@@ -10,6 +10,7 @@ public class Player_Health : MonoBehaviour
     public Slider slider;
     public int currentHealth;
     public PlayerLivesCounter plc;
+   
 
 
     public void Start()
@@ -22,7 +23,7 @@ public class Player_Health : MonoBehaviour
         slider.maxValue = health;
         slider.value = health;
     }
-
+    
     public void SetHealth(int health)
     {
         slider.value = health;
@@ -36,18 +37,34 @@ public class Player_Health : MonoBehaviour
 
         
     }
+    
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         
         if (currentHealth <= 0)
         {
-            currentHealth = maxHealth;
-            plc.LoseLives(1);
+            if (plc.life <= 0)
+            {
+
+
+                currentHealth = 0;
+            }
+
+
+            else
+            {
+                plc.LoseLives(1);
+                currentHealth = maxHealth;
+            }
+
+
+
 
         }
         slider.value = currentHealth;
     }
+    
 
    
 
