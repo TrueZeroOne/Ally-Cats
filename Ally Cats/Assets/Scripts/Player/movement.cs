@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public class movement : MonoBehaviour
 {
@@ -19,16 +18,24 @@ public class movement : MonoBehaviour
     public Player_Health healthBar;
 
 
+<<<<<<< Updated upstream
     private void Start()
     {
         
     }
+=======
+   
+>>>>>>> Stashed changes
 
    
     private void Update()
     {
+<<<<<<< Updated upstream
        
 
+=======
+        
+>>>>>>> Stashed changes
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.Space) && jumpCheck)
