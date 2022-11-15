@@ -10,6 +10,7 @@ public class Player_Health : MonoBehaviour
     public Slider slider;
     public int currentHealth;
     public PlayerLivesCounter plc;
+    
    
 
 
@@ -63,9 +64,13 @@ public class Player_Health : MonoBehaviour
 
         }
         slider.value = currentHealth;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
     }
     
-
+   
    
 
 }

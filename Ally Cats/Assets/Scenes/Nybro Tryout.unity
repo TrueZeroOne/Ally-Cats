@@ -674,6 +674,46 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 1723451684}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[0]
+      value: 
+      objectReference: {fileID: 527098912}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[1]
+      value: 
+      objectReference: {fileID: 1486574947}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[2]
+      value: 
+      objectReference: {fileID: 2021315271}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[3]
+      value: 
+      objectReference: {fileID: 1553273302}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[4]
+      value: 
+      objectReference: {fileID: 1146121436}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[5]
+      value: 
+      objectReference: {fileID: 1913276786}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[6]
+      value: 
+      objectReference: {fileID: 408392592}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[7]
+      value: 
+      objectReference: {fileID: 1528326312}
+    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
+      propertyPath: Lives.Array.data[8]
+      value: 
+      objectReference: {fileID: 508892984}
     - target: {fileID: 7944981380339950904, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
       propertyPath: healthBar
       value: 
