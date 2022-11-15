@@ -8,6 +8,8 @@ public class movement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     private float horizontalInput;
     private float verticalInput;
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private GameObject firePoint;
 
     [Header("Inputs")]
     [SerializeField] private float horSpeed;
@@ -16,6 +18,7 @@ public class movement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [Header("Health")]
     public Player_Health healthBar;
+
 
     private void Start()
     {
@@ -49,6 +52,16 @@ public class movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector3(horizontalInput * horSpeed, rb.velocity.y, verticalInput * verSpeed);
+        if (horizontalInput == -1)
+        {
+            sprite.flipX = true;
+            firePoint.transform.position = new Vector3(-1.1f, transform.position.y, transform.position.z);
+        }
+        if (horizontalInput == 1)
+        {
+            sprite.flipX = false;
+            firePoint.transform.position = new Vector3(1.1f, transform.position.y, transform.position.z);
+        }
     }
     private void Jump()
     {
