@@ -182,7 +182,9 @@ public class PlayerLivesCounter : MonoBehaviour
 
     public void LoseLives(int lives)
     {
-        life -= lives;
+        if(life >= Lives.Length)
+        {
+            life -= lives;
+        }
     }
-    
 }
