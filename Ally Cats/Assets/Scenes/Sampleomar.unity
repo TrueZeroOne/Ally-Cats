@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 394469576}
   - component: {fileID: 394469579}
   - component: {fileID: 394469577}
+  - component: {fileID: 394469580}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -337,8 +338,6 @@ MonoBehaviour:
   verSpeed: 8
   jumpCheck: 1
   jumpForce: 6
-  camma: {fileID: 1673988581}
-  maxpos: 0
   healthBar: {fileID: 1723451684}
 --- !u!212 &394469574
 SpriteRenderer:
@@ -481,6 +480,20 @@ MonoBehaviour:
   attackRange: 3
   damage: 20
   timer: 0.5
+--- !u!114 &394469580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394469572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce223b74f04a1b449d4153ec428bc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camma: {fileID: 1673988581}
+  maxpos: 0
 --- !u!1 &602708502
 GameObject:
   m_ObjectHideFlags: 0
