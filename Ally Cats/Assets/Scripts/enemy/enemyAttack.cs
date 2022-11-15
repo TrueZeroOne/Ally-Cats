@@ -20,23 +20,7 @@ public class enemyAttack : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= attRange&&canAttack)
         {
-            StartCoroutine(Attack());
-            canAttack = false;
+            
         }
-    }
-    public IEnumerator Attack()
-    {
-        var nav = this.gameObject.GetComponent<navEnemy>();
-        nav.Agent.isStopped = true;
-        yield return new WaitForSeconds(2f);
-        if (Vector3.Distance(player.transform.position, transform.position) <= attRange && player.transform.position.y < 0)
-        {
-            Debug.Log("DAMAGE");
-            var health = FindObjectOfType(typeof(movement)) as movement;
-            health.TakeDamage(10);   
-        }
-        nav.Agent.isStopped = false;
-        canAttack = true;
-        yield return new WaitForSeconds(0f);
     }
 }

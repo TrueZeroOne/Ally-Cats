@@ -6,7 +6,6 @@ public class enemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabEnemies;
     [SerializeField] private int[] enemiesToSpawn;
-    [SerializeField] private int[] enemies;
     [SerializeField] private int spawnTime;
     [SerializeField] private GameObject enemyhandeler;
     // Start is called before the first frame update

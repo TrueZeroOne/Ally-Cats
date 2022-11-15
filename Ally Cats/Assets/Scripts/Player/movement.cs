@@ -55,12 +55,10 @@ public class movement : MonoBehaviour
         if (horizontalInput == -1)
         {
             sprite.flipX = true;
-            firePoint.transform.position = new Vector3(-1.1f, transform.position.y, transform.position.z);
         }
         if (horizontalInput == 1)
         {
             sprite.flipX = false;
-            firePoint.transform.position = new Vector3(1.1f, transform.position.y, transform.position.z);
         }
     }
     private void Jump()

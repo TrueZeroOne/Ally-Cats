@@ -27,6 +27,14 @@ public class Ranged_Attack : MonoBehaviour
     void Shoot()
     {
         //Shooting Logic
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if(GameObject.FindGameObjectWithTag("Sprite").GetComponent<SpriteRenderer>().flipX == true)
+        {
+            Instantiate(bulletPrefab, new Vector3(firePoint.position.x-2,firePoint.position.y,firePoint.position.z), firePoint.rotation);
+        }
+        else if(GameObject.FindGameObjectWithTag("Sprite").GetComponent<SpriteRenderer>().flipX == false)
+        {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+        
     }
 }
