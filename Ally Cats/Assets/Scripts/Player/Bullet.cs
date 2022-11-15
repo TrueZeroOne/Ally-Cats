@@ -13,12 +13,21 @@ public class Bullet : MonoBehaviour
     private DateTime createTime;
     public Rigidbody rb;
     int damage = 10;
+    public GameObject player;
     
    
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * speed;
+        player = GameObject.FindGameObjectWithTag("Sprite");
+        if (player.GetComponent<SpriteRenderer>().flipX == false)
+        {
+            rb.velocity = transform.right * speed;
+        }
+        else if(player.GetComponent<SpriteRenderer>().flipX == true)
+        {
+            rb.velocity = transform.right * speed*-1;
+        }
         GetComponent<EnemyHealth>();
         createTime = DateTime.Now;
         
