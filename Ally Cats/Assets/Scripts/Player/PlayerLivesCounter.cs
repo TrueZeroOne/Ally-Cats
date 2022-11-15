@@ -6,15 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerLivesCounter : MonoBehaviour
 {
-    public GameObject Life1;
-    public GameObject Life2;
-    public GameObject Life3;
-    public GameObject Life4;
-    public GameObject Life5;
-    public GameObject Life6;
-    public GameObject Life7;
-    public GameObject Life8;
-    public GameObject Life9;
+    public GameObject[] Lives;
+
     public Player_Health healthbar;
 
     public int life;
@@ -33,32 +26,45 @@ public class PlayerLivesCounter : MonoBehaviour
         {
             LoseLives(-1);
         }
-        switch (life)
+        for (int i = 0; i < Lives.Length; i++)
+        {
+            if (i >= life)
+            {
+                Lives[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                Lives[i].gameObject.SetActive(true);
+            }
+        }
+        /*switch (life)
         {
             case 0:
                 {
-                    Life1.gameObject.SetActive(false);
-                    Life2.gameObject.SetActive(false);
-                    Life3.gameObject.SetActive(false);
-                    Life4.gameObject.SetActive(false);
-                    Life5.gameObject.SetActive(false);
-                    Life6.gameObject.SetActive(false);
-                    Life7.gameObject.SetActive(false);
-                    Life8.gameObject.SetActive(false);
-                    Life9.gameObject.SetActive(false);
+                    for (int i = 0; i < Lives.Length; i++)
+                    {
+                        if (i >= life)
+                        {
+                            Lives[i].gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            Lives[i].gameObject.SetActive(false);
+                        }
+                    }
                     break;
                 }
             case 1:
                 {
-                    Life1.gameObject.SetActive(true);
-                    Life2.gameObject.SetActive(false);
-                    Life3.gameObject.SetActive(false);
-                    Life4.gameObject.SetActive(false);
-                    Life5.gameObject.SetActive(false);
-                    Life6.gameObject.SetActive(false);
-                    Life7.gameObject.SetActive(false);
-                    Life8.gameObject.SetActive(false);
-                    Life9.gameObject.SetActive(false);
+                    Lives[1].gameObject.SetActive(true);
+                    Lives[2].gameObject.SetActive(false);
+                    Lives[3].gameObject.SetActive(false);
+                    Lives[4].gameObject.SetActive(false);
+                    Lives[5].gameObject.SetActive(false);
+                    Lives[6].gameObject.SetActive(false);
+                    Lives[7].gameObject.SetActive(false);
+                    Lives[8].gameObject.SetActive(false);
+                    Lives[9].gameObject.SetActive(false);
                     break;
                 }
             case 2:
@@ -165,7 +171,7 @@ public class PlayerLivesCounter : MonoBehaviour
                     Life9.gameObject.SetActive(true);
                     break;
                 }
-        }
+        }*/
         if(life == 0 && healthbar.currentHealth <= 0)
         {
             Debug.Log("Dead");
