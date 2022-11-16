@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class navEnemy : MonoBehaviour
 {
-    [SerializeField] Animator anim;
+    //[SerializeField] Animator anim;
     [SerializeField] private GameObject playerObj;
     [SerializeField] public NavMeshAgent Agent;
 
@@ -23,7 +23,7 @@ public class navEnemy : MonoBehaviour
         Agent.destination = playerObj.transform.position;
         if (Agent.velocity.magnitude > 0)
         {
-            anim.SetTrigger("speed");
+            //anim.SetTrigger("speed");
         }
     }
 }

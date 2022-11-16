@@ -25,7 +25,6 @@ public class trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(spawnerScript.waves);
         if (spawnerScript.waves == 0)
         {
             rb.isKinematic = false;
