@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7944981380055103964}
   m_Layer: 0
   m_Name: animate
-  m_TagString: Untagged
+  m_TagString: Sprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818e74d37f4ea0846a880cbc37f70a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 5226313482140455309}
   bulletPrefab: {fileID: 3672429530118748482, guid: 39d2e9c1b3841ea49b6f4e60c1720f58, type: 3}
   fireRate: 1
   anim: {fileID: 7944981380055103971}
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7944981380055103971}
   rb: {fileID: 7944981380339950901}
-  sprite: {fileID: 0}
-  firePoint: {fileID: 0}
+  sprite: {fileID: 7944981380055103970}
+  firePoint: {fileID: 7944981380874439970}
   horSpeed: 8
   verSpeed: 8
   jumpCheck: 1
@@ -400,7 +400,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986aa697ddc6887489b0905f8eb3f606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lives: []
+  Lives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   healthbar: {fileID: 0}
   life: 9
 --- !u!1 &7944981380874439970
@@ -427,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7944981380874439970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.114, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

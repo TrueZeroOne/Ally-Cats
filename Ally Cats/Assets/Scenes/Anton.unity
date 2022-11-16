@@ -128,11 +128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2229335567104689876, guid: 22e21aee0e9ca4942ab44ac10c935173, type: 3}
   m_PrefabInstance: {fileID: 945886520}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &151146001 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7944981380055103970, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-  m_PrefabInstance: {fileID: 1231265771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168496410
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,8 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabEnemies:
   - {fileID: 2311591111293690558, guid: 5068f22b55349ec4b8285aa310037163, type: 3}
-  enemiesToSpawn: 02000000
-  spawnTime: 2
+  enemiesPerWave: 0
+  waves: 0
   enemyhandeler: {fileID: 692829228}
 --- !u!23 &168496412
 MeshRenderer:
@@ -773,34 +768,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5226313482140455309, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7944981380055103964, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1588983150}
-    - target: {fileID: 7944981380055103968, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: m_TagString
-      value: Sprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 7944981380055103970, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7944981380055103970, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 1044668747}
-    - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: Lives.Array.size
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 7944981380339950897, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
       propertyPath: Lives.Array.data[0]
       value: 
@@ -837,14 +808,6 @@ PrefabInstance:
       propertyPath: Lives.Array.data[8]
       value: 
       objectReference: {fileID: 1076821483}
-    - target: {fileID: 7944981380339950904, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: sprite
-      value: 
-      objectReference: {fileID: 151146001}
-    - target: {fileID: 7944981380339950904, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1588983149}
     - target: {fileID: 7944981380339950904, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
       propertyPath: healthBar
       value: 
@@ -897,22 +860,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7944981380339950907, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
---- !u!1 &1588983149 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7944981380874439970, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-  m_PrefabInstance: {fileID: 1231265771}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1588983150 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5226313482140455309, guid: c4cf89b9bdf44ea4fbe060cd83126a9f, type: 3}
-  m_PrefabInstance: {fileID: 1231265771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1633649358
 GameObject:
   m_ObjectHideFlags: 0
