@@ -5,14 +5,9 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabEnemies;
-<<<<<<< Updated upstream
-    [SerializeField] private int[] enemiesToSpawn;
-    [SerializeField] private int spawnTime;
-=======
     private int[] enemiesToSpawn;
     [SerializeField] private int enemiesPerWave;
     public int waves;
->>>>>>> Stashed changes
     [SerializeField] private GameObject enemyhandeler;
     private bool restock = false;
 
