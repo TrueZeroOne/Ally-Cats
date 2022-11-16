@@ -7,36 +7,42 @@ public class trigger : MonoBehaviour
     public Rigidbody rb;
     public BoxCollider[] camcollider;
     public GameObject cameraobj;
-
+    private BoxCollider owncollider;
+    static int currentdirection;
     [SerializeField] private GameObject spawner;
-    private enemySpawner spawnerScript;
+    public enemySpawner spawnerScript;
     private bool newWaves;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         camcollider = cameraobj.GetComponents<BoxCollider>();
         spawnerScript = spawner.GetComponent<enemySpawner>();
+        owncollider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(spawnerScript.waves);
         if (spawnerScript.waves == 0)
         {
             rb.isKinematic = false;
-            if (gameObject.name == "trigger")
-            {
-                GetComponent<BoxCollider>().enabled = false;
-            }
-            for (int i = 0; i < camcollider.Length; i++)
-            {
-                camcollider[i].enabled = true;
-            }
 
+            camcollider[currentdirection].enabled = true;
         }
+        
+        
     }
 
-
+    void DisableAllCollliders()
+    {
+        for (int i = 0; i < camcollider.Length; i++)
+        {
+            camcollider[i].enabled = false;
+        }
+    }
         
 
     private void OnTriggerEnter(Collider collision)
@@ -45,13 +51,35 @@ public class trigger : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             rb.isKinematic = true;
-            spawnerScript.waves = 3;
+            spawnerScript.waves = 1;
+            owncollider.enabled = false;
             for (int i = 0; i < camcollider.Length;i++)
             {
                 camcollider[i].enabled = false;
                
             }
-            spawner.GetComponent<enemySpawner>().enemySpawn();
+            spawnerScript.enemySpawn();
+
+            DisableAllCollliders();
+            if (transform.tag == "Right")
+            {   
+                rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+                currentdirection = 0;
+            }
+            if (transform.tag == "Up")
+            {
+                
+                rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
+                 
+
+                currentdirection = 1;
+            }
+            if (transform.tag == "Down")
+            {
+                rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotation;
+
+                currentdirection = 2;
+            }
         }
     }
 }
