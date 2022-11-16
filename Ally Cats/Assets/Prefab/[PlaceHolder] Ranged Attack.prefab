@@ -130,3 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 6642626159692163773}
+  player: {fileID: 0}
