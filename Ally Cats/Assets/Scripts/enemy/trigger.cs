@@ -11,7 +11,8 @@ public class trigger : MonoBehaviour
     static int currentdirection;
     [SerializeField] private GameObject spawner;
     public enemySpawner spawnerScript;
-    private bool newWaves;
+    public int amountOfWaves;
+    public int enemyPerWave;
 
     
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class trigger : MonoBehaviour
         camcollider = cameraobj.GetComponents<BoxCollider>();
         spawnerScript = spawner.GetComponent<enemySpawner>();
         owncollider = GetComponent<BoxCollider>();
+        spawnerScript.enemiesPerWave = enemyPerWave;
     }
 
     // Update is called once per frame
@@ -50,7 +52,8 @@ public class trigger : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             rb.isKinematic = true;
-            spawnerScript.waves = 1;
+            spawnerScript.waves = amountOfWaves;
+            spawnerScript.enemiesPerWave = enemyPerWave;
             owncollider.enabled = false;
             for (int i = 0; i < camcollider.Length;i++)
             {

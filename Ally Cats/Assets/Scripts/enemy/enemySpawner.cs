@@ -6,8 +6,9 @@ public class enemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabEnemies;
     private int[] enemiesToSpawn;
-    [SerializeField] private int enemiesPerWave;
+    public int enemiesPerWave;
     public int waves;
+    public int wavesAmount;
     [SerializeField] private GameObject enemyhandeler;
     private bool restock = false;
 

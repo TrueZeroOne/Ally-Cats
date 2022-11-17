@@ -60,6 +60,7 @@ public class movement : MonoBehaviour
         {
             sprite.flipX = false;
         }
+        
     }
     private void Jump()
     {
