@@ -505,22 +505,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -825
-      objectReference: {fileID: 0}
-    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 464
-      objectReference: {fileID: 0}
     - target: {fileID: 3915794419519526255, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: plc
       value: 
       objectReference: {fileID: 1924626454}
-    - target: {fileID: 3915794420881812317, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.18270874
-      objectReference: {fileID: 0}
     - target: {fileID: 8629714328468001614, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: m_Name
       value: Player UI
