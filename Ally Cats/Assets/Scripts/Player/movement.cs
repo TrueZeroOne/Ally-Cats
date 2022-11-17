@@ -65,6 +65,14 @@ public class movement : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+        if (horizontalInput == -1)
+        {
+            sprite.flipX = true;
+        }
+        if (horizontalInput == 1)
+        {
+            sprite.flipX = false;
+        }
     }
     
     public void TakeDamage(int damage)
