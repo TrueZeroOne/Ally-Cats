@@ -9,6 +9,13 @@ public class StartGame : MonoBehaviour
     public string sgamename;
 
     public bool useIntegerToLoadLevel;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            StartLvl();
+        }
+    }
 
     public void StartLvl()
     {
