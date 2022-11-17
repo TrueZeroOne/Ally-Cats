@@ -830,7 +830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ff0953729a54d4eb8b5fd22cad8720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   player: {fileID: 0}
   attRange: 4
   attackspeed: 0
@@ -2703,6 +2702,10 @@ PrefabInstance:
     - target: {fileID: 762331026938072200, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929453725500746418, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3915794419152648176, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: m_AnchorMax.x
