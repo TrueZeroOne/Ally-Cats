@@ -46,6 +46,7 @@ public class movement : MonoBehaviour
         
 
         anim.SetFloat("speed",rb.velocity.x);
+        anim.SetFloat("speed-", rb.velocity.x);
         anim.SetFloat("vert speed",rb.velocity.y);
     }
 
