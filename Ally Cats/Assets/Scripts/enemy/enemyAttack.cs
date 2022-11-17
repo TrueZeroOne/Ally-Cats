@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class enemyAttack : MonoBehaviour
 {
-    //public Animator anim;
+    public Animator anim;
     private float attackTime;
     [SerializeField] private GameObject player;
     [SerializeField] private int attRange;
@@ -23,10 +23,10 @@ public class enemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (canAttack == true)
-        {
-            anim.SetTrigger("attack");
-        }*/
+        
+        
+            
+        
         if (Vector3.Distance(player.transform.position, transform.position) <= attRange)
         {
             if(canAttack == true)
@@ -34,6 +34,7 @@ public class enemyAttack : MonoBehaviour
                 attStart = DateTime.Now;
                 canAttack = false;
                 Debug.Log("IS ATTACKING");
+                
             }
             nav = gameObject.GetComponent<navEnemy>();
             nav.Agent.isStopped = true;
@@ -45,6 +46,7 @@ public class enemyAttack : MonoBehaviour
                 health.TakeDamage(10);
                 nav.Agent.isStopped = false;
                 canAttack = true;
+                anim.SetTrigger("attack");
             }
         }
         else if (Vector3.Distance(player.transform.position, transform.position) > attRange && canAttack == false)
