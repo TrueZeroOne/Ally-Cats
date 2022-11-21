@@ -210,8 +210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 132350515001714413}
   player: {fileID: 0}
-  attRange: 4
-  attackspeed: 1
+  attRange: 2
+  attackspeed: 2
 --- !u!114 &132350515091808406
 MonoBehaviour:
   m_ObjectHideFlags: 0

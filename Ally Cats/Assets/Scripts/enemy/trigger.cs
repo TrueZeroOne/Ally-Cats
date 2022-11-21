@@ -14,10 +14,12 @@ public class trigger : MonoBehaviour
     public int amountOfWaves;
     public int enemyPerWave;
 
-    
-    // Start is called before the first frame update
-    void Start()
+
+    // Start is called before the first frame update'
+    private void Awake()
     {
+        
+    
         camcollider = cameraobj.GetComponents<BoxCollider>();
         spawnerScript = spawner.GetComponent<enemySpawner>();
         owncollider = GetComponent<BoxCollider>();

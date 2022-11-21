@@ -42,11 +42,16 @@ public class enemySpawner : MonoBehaviour
     }
     public void enemySpawn()
     {
+        Debug.Log(enemiesToSpawn.Length + " googoddd");
+
         for (int i = 0; i < enemiesToSpawn.Length; i++)
         {
+
+            Debug.Log(enemiesToSpawn[i] + " googo");
             while (enemiesToSpawn[i] > 0)
             {
-                Instantiate(prefabEnemies[i], new Vector3(transform.position.x + Random.Range(-3, 3), transform.position.y, transform.position.z + Random.Range(-3, 3)), transform.rotation, enemyhandeler.transform);
+                
+                Instantiate(prefabEnemies[i], new Vector3(transform.position.x + Random.Range(-5, 5), transform.position.y, transform.position.z + Random.Range(-5, 5)), transform.rotation, enemyhandeler.transform);
                 enemiesToSpawn[i]--;
                 restock = true;
             }

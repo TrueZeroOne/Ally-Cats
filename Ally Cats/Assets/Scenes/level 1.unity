@@ -1147,6 +1147,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 222566156}
     - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
+      propertyPath: enemyPerWave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
+      propertyPath: amountOfWaves
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
       propertyPath: spawnerScript
       value: 
       objectReference: {fileID: 1754646805}
@@ -2295,7 +2303,7 @@ PrefabInstance:
     - target: {fileID: 8286180286010035917, guid: ea0e47e642c3c8848b0915f694336e67, type: 3}
       propertyPath: prefabEnemies.Array.data[0]
       value: 
-      objectReference: {fileID: 7525505975950435651, guid: 44012824f5986364ba6c53d93e0a8b5f, type: 3}
+      objectReference: {fileID: 132350515091808404, guid: 6565211e52c851b41b922af92eef8286, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea0e47e642c3c8848b0915f694336e67, type: 3}
 --- !u!1 &406332716
@@ -3740,6 +3748,14 @@ PrefabInstance:
       propertyPath: cameraobj
       value: 
       objectReference: {fileID: 222566156}
+    - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
+      propertyPath: enemyPerWave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
+      propertyPath: amountOfWaves
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
       propertyPath: spawnerScript
       value: 
@@ -10370,6 +10386,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 222566156}
     - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
+      propertyPath: enemyPerWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
+      propertyPath: amountOfWaves
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711152543375902866, guid: b194adcb827441546963518262baf469, type: 3}
       propertyPath: spawnerScript
       value: 
       objectReference: {fileID: 1754646805}
@@ -10702,6 +10726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2929453725500746418, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3915794419152648176, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10709,6 +10737,26 @@ PrefabInstance:
     - target: {fileID: 3915794419152648176, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0485705
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1037585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1037585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -287
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915794419519526248, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 181
       objectReference: {fileID: 0}
     - target: {fileID: 3915794419519526255, guid: 7a0253a35ebea504d8eb0b801574548e, type: 3}
       propertyPath: plc
