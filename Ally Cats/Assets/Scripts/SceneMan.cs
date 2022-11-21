@@ -33,7 +33,7 @@ public class SceneMan : MonoBehaviour
 
     }
 
-    void LoadScene()
+    public void LoadScene()
     {
         if (useIntegerToLoadLevel)
         {

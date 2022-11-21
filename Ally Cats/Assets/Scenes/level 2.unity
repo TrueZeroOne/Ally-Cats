@@ -3017,7 +3017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ff0953729a54d4eb8b5fd22cad8720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   player: {fileID: 0}
   attRange: 4
   attackspeed: 0

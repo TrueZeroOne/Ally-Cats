@@ -13,7 +13,6 @@ public class enemySpriteRotate : MonoBehaviour
     void Start()
     {
         playerXpos = GameObject.FindGameObjectWithTag("Player").transform;
-
     }
 
     // Update is called once per frame
